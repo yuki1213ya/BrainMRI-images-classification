@@ -41,7 +41,7 @@
    ```
    git clone https://github.com/yuki1213ya/BrainMRI-images-classification.git
    ```  
-2. Google driveからモデルをダウンロードし、`models/`に格納します。デフォルトでは、`efficientnet_v2_m-Fold-1.onnx`を使用していますが、`Dockerfile`の環境変数と`.gitignore`の設定を変更することで、別のモデルを使用する事ができます。（URL: https://drive.google.com/drive/folders/1aouJ5f4mXFhex5Lm-5bXR8RwYOklov6X）
+2. Google driveからモデルをダウンロードし、`models/`に格納します。デフォルトでは、`efficientnet_v2_m-Fold-1.onnx`を使用していますが、`Dockerfile`の環境変数と`.gitignore`の設定を変更することで、別のモデルを使用する事ができます。（URL: https://drive.google.com/drive/folders/1aouJ5f4mXFhex5Lm-5bXR8RwYOklov6X ）
 3. Docker上でサーバーを起動する
    ```
    docker-compose up
