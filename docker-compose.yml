@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  brainmri-images-classification:
+    build: . # Dockerfileがあるディレクトリへの相対パス
+    ports:
+      - "8000:8000" # ホストマシンのポート番号：コンテナのポート番号
+    volumes:
+      - .:/myapp # ホストディレクトリ：コンテナ内ディレクトリ
+    container_name: brainmri-images-classification
+    tty: true # コンテナを起動し続ける
+    command: "./run.sh" # シェルスクリプトを実行する
+

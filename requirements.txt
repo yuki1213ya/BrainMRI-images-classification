@@ -1,0 +1,11 @@
+fastapi
+gunicorn
+importlib-metadata
+numpy
+onnx
+onnxruntime
+Pillow
+pydantic
+typing
+uvicorn
+

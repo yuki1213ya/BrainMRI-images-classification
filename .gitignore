@@ -1,0 +1,4 @@
+.DS_Store
+models/efficientnet_v2_m-Fold-1.onnx
+*.pyc
+README.md
