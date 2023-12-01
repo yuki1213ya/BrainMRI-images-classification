@@ -11,29 +11,30 @@
 ├── __init__.py
 ├── docker-compose.yml
 ├── models
-│   ├── efficientnet_v2_m-Fold-1.onnx　 MRI画像の分類モデル（Google Driveよりダウンロードする必要あり）
-│   └── label.json　　　　　　　　　　　　　ラベル一覧
+│   ├── efficientnet_v2_m-Fold-1.onnx　 　　　　MRI画像の分類モデル（Google Driveよりダウンロードする必要あり）
+│   ├── Brain-MRI-Images-classfication.ipynb　モデルを作成したnotebook（APIにおいて必要は無し）
+│   └── label.json　　　　　　　　　　　　　　　　　ラベル一覧
 ├── requirements.txt
 ├── run.sh
 ├── sample_images
-│   ├── no_1.jpg　　　　　　　　　　　　　　 サンプル画像①（腫瘍なし）　　　　　　　　　
-│   ├── no_2.jpg　　　　　　　　　　　　　　 サンプル画像②（腫瘍なし）　　　　　　　　　
-│   ├── yes_1.jpg　　　　　　　　　　　　　　サンプル画像①（腫瘍あり）　　　
-│   └── yes_2.jpg　　　　　　　　　　　　　　サンプル画像②（腫瘍あり）　　　
+│   ├── no_1.jpg　　　　　　　　　　　　　　 　　　　サンプル画像①（腫瘍なし）　　　　　　　　　
+│   ├── no_2.jpg　　　　　　　　　　　　　　 　　　　サンプル画像②（腫瘍なし）　　　　　　　　　
+│   ├── yes_1.jpg　　　　　　　　　　　　　　　　　　サンプル画像①（腫瘍あり）　　　
+│   └── yes_2.jpg　　　　　　　　　　　　　　　　　　サンプル画像②（腫瘍あり）　　　
 └── src
     ├── __init__.py
     ├── app
     │   ├── __init__.py
-    │   ├── app.py　　　　　　　　　　　　　 アプリケーションの起動
+    │   ├── app.py　　　　　　　　　　　　　 　　　　アプリケーションの起動
     │   └── routers
     │       ├── __init__.py
-    │       └── routers.py　　　　　　　　　エンドポイントの集約
-    ├── configurations.py　　　　　　　　　 アプリケーションとモデルの設定
+    │       └── routers.py　　　　　　　　　　　　　エンドポイントの集約
+    ├── configurations.py　　　　　　　　　 　　　　アプリケーションとモデルの設定
     ├── ml
     │   ├── __init__.py
-    │   └── prediction.py　　　　　　　　　　分類モデル
+    │   └── prediction.py　　　　　　　　　　　　　　分類モデル
     └── utils
-        └── logging.conf　　　　　　　　　　 ロギングの設定
+        └── logging.conf　　　　　　　　　　 　　　　ロギングの設定
 ```
 ## 環境構築
 1. レポジトリをクローンする
