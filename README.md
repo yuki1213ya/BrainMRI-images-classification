@@ -42,11 +42,17 @@
    git clone https://github.com/yuki1213ya/BrainMRI-images-classification.git
    ```  
 2. Google driveからモデルをダウンロードし、`models/`に格納します。デフォルトでは、`efficientnet_v2_m-Fold-1.onnx`を使用していますが、`Dockerfile`の環境変数と`.gitignore`の設定を変更することで、別のモデルを使用する事ができます。（URL: https://drive.google.com/drive/folders/1aouJ5f4mXFhex5Lm-5bXR8RwYOklov6X ）
-3. Docker上でサーバーを起動する
+   * モデル精度の一覧（評価指標：AUC）
+       *  efficientnet_v2_m-Fold-0.onnx: 0.9984
+       *  efficientnet_v2_m-Fold-1.onnx: 0.9996
+       *  efficientnet_v2_m-Fold-2.onnx: 0.9993
+       *  efficientnet_v2_m-Fold-3.onnx: 0.9993
+       *  efficientnet_v2_m-Fold-4.onnx: 0.9996
+4. Docker上でサーバーを起動する
    ```
    docker-compose up
    ```
-4. 起動したAPIにクライアントからリクエストを送信
+5. 起動したAPIにクライアントからリクエストを送信
    ```
    # ヘルスチェック
    curl localhost:8000/health
@@ -98,3 +104,7 @@
    
    
    ```
+
+## 反省点
+* モデル作成において、軽量なモデルから試すべきだった点
+    * 今回、特徴量抽出器として、`efficientnet-v2-m`を使用しましたが、学習済みモデルの選定に関して、他のモデルと比較検討せずに進めてしまいました。APIの構造上モデルのサイズを落とした方が、処理は早くなるので、より軽量な学習済みモデルを使うべきだったと反省しています。大きなモデルを使ったことにより、良い精度が出たことはポジティブな点ですが、ややオーバースペックすぎたかもしれません。
