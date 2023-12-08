@@ -59,16 +59,20 @@
    ```  
 2. Google driveからモデルをダウンロードし、`models/`に格納します。デフォルトでは、`efficientnet_v2_m-Fold-1.onnx`を使用していますが、`Dockerfile`の環境変数と`.gitignore`の設定を変更することで、別のモデルを使用する事ができます。（URL: https://drive.google.com/drive/folders/1aouJ5f4mXFhex5Lm-5bXR8RwYOklov6X ）
    * モデル精度の一覧（評価指標：AUC）
-       *  efficientnet_v2_m-Fold-0.onnx: 0.9984
-       *  efficientnet_v2_m-Fold-1.onnx: 0.9996
-       *  efficientnet_v2_m-Fold-2.onnx: 0.9993
-       *  efficientnet_v2_m-Fold-3.onnx: 0.9993
-       *  efficientnet_v2_m-Fold-4.onnx: 0.9996
-4. Docker上でサーバーを起動する
+
+     | モデル名 | AUC |
+     | ---- | ---- |
+     | efficientnet_v2_m-Fold-0.onnx | 0.9984 |
+     | efficientnet_v2_m-Fold-1.onnx | 0.9996 |
+     | efficientnet_v2_m-Fold-2.onnx | 0.9993 |
+     | efficientnet_v2_m-Fold-3.onnx | 0.9993 |
+     | efficientnet_v2_m-Fold-4.onnx | 0.9996 |
+
+3. Docker上でサーバーを起動する
    ```
    docker-compose up
    ```
-5. 起動したAPIにクライアントからリクエストを送信
+4. 起動したAPIにクライアントからリクエストを送信
    ```
    # ヘルスチェック
    curl localhost:8000/health
